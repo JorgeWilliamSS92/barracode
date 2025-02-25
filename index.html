@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Read.xml</title>
+  </head>
+  <body>
+    <header>
+      <h1>Gerador de arquivo</h1>
+    </header>
+    <main>
+      <div class="all">
+        <h2>Gerar código de barras sem espaços:</h2>
+        <div>
+          <label for="barCode">Insira o código:</label>
+          <input type="text" id="barCode" />
+          <button onclick="generator()">Gerar</button>
+          <button onclick="clearR()">Limpar</button>
+        </div>
+        <div class="inf">
+          <p id="results" onclick="copy()"></p>
+          <p id="copied"></p>
+        </div>
+      </div>
+
+      <div class="all">
+        <h2>Gerar arquivo CSV consolidado:</h2>
+        <label for="cod">Cod.:</label>
+        <input type="text" id="cod" maxlength="7" />
+        <input id="xmlInput" type="file" multiple="multiple" accept=".xml" />
+        <button id="processButton">Processar</button>
+      </div>
+    </main>
+    <footer>
+      <h4>Copyright © Created by Jorge William.</h4>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

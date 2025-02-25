@@ -1,0 +1,122 @@
+html {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 62.5%;
+  height: 98%;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  background-color: black;
+  color: white;
+  justify-content: space-between;
+  height: 100%;
+
+  & header {
+    text-align: center;
+    height: 5%;
+
+    & h1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      text-shadow: 0.5rem 0.5rem 2rem rgb(22, 22, 219);
+      margin-top: 6rem;
+    }
+  }
+  & main {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    height: 55%;
+
+    & .all:hover {
+      box-shadow: 0rem 0rem 2rem rgb(22, 22, 219);
+    }
+
+    & .all {
+      width: 50%;
+      height: 0%;
+      border: 0.1rem solid white;
+      border-radius: 1rem;
+      height: 25rem;
+      padding: 1rem 2rem;
+      transition: 0.5s ease-in-out box-shadow;
+
+      & p {
+        width: max-content;
+        font-size: 1.5rem;
+        color: white;
+        margin-top: 2rem;
+      }
+
+      & h2 {
+        font-size: 2.5rem;
+        color: white;
+        margin-bottom: 3rem;
+      }
+      & div {
+        gap: 2rem;
+        width: 100%;
+        font-size: 1.5rem;
+        & input {
+          width: 40%;
+          border-radius: 0.5rem;
+          font-size: 1.5rem;
+          color: black;
+        }
+        & label {
+          color: white;
+          width: 18%;
+          font-weight: 700;
+        }
+      }
+      & button {
+        font-size: 1.5rem;
+        padding: 0.1rem 2rem;
+        font-weight: 700;
+        cursor: pointer;
+        border-radius: 0.5rem;
+      }
+      & button:hover {
+        background-color: rgb(230, 228, 228);
+      }
+      & #copied {
+        font-style: italic;
+        font-size: 1rem;
+        color: rgb(22, 22, 219);
+        align-content: center;
+        margin-top: -1rem;
+      }
+      & #results {
+        cursor: pointer;
+      }
+    }
+    & #xmlInput {
+      color: white;
+      font-size: 1.5rem;
+      padding: 0.1rem 2rem;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 0.5rem;
+    }
+    & #cod {
+      width: 8%;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    & label {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    & input:hover {
+    }
+  }
+  & footer {
+    text-align: center;
+  }
+}
