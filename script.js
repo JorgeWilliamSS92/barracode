@@ -72,6 +72,13 @@ document
           let pCub = "";
           i += 1;
 
+          emissao = dformat(emissao);
+
+          function dformat(element) {
+            const d = element.split("-");
+            return `${d[2]}/${d[1]}/${d[0]}`;
+          }
+
           // adding the data to the array
           allData.push({
             nota: i,
