@@ -58,15 +58,14 @@ document
           let chaveAcesso = infNFe.getAttribute("Id").replace("NFe", "");
           chaveAcesso = chaveAcesso + "'";
           const codClient = document.getElementById("cod").value;
-          let nf = nota.getElementsByTagName("cNF")[0]?.textContent;
-          let valor = nota.getElementsByTagName("vNF")[0]?.textContent;
-          let peso = nota.getElementsByTagName("pesoB")[0]?.textContent;
-
+          let nf = nota.getElementsByTagName("nNF")[0]?.textContent;
+          let valor = nota.getElementsByTagName("vNF")[0]?.textContent.replace(".", ",");
+          let peso = nota.getElementsByTagName("pesoB")[0]?.textContent.replace(".", ",");
           let nameD = "";
           let CNPJ = "";
           let serie = nota.getElementsByTagName("serie")[0]?.textContent;
           let subSerie = "";
-          let emissao = nota.getElementsByTagName("dEmi")[0]?.textContent;
+          let emissao = nota.getElementsByTagName("dhEmi")[0]?.textContent.substring(0, 10);
           let vSeguro = valor;
           let qVol = nota.getElementsByTagName("qVol")[0].textContent;
           let desc = "DIVERSOS";
