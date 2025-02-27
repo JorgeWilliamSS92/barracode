@@ -67,7 +67,7 @@ document
           let subSerie = "";
           let emissao = nota.getElementsByTagName("dhEmi")[0]?.textContent.substring(0, 10);
           let vSeguro = valor;
-          let qVol = nota.getElementsByTagName("qVol")[0].textContent;
+          let qVol = nota.getElementsByTagName("qVol")[0]?.textContent;
           let desc = "DIVERSOS";
           let pCub = "";
           i += 1;
@@ -79,6 +79,9 @@ document
             return `${d[2]}/${d[1]}/${d[0]}`;
           }
 
+          if (!peso || peso == "") {
+            peso = "0,01";
+          }
           // adding the data to the array
           allData.push({
             nota: i,
